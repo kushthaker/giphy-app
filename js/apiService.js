@@ -11,7 +11,7 @@ ApiService.prototype.getTags = function() {
   var self = this;
 
   return self.$http.get(self.URL)
-  .success(function(data, status, headers, config) {
-    debugger;
+  .then(function(response) {
+    return response.data;
   });
 };
