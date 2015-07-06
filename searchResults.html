@@ -1,20 +1,24 @@
 <!-- top will have a search box
 
-search results are displayed at a max of 200 x 200 pixels -->
+	search results are displayed at a max of 200 x 200 pixels -->
 
-<div>
-  <h1 class="text-center">My Gipghy search</h1>
+	<div>
+		<h1 class="text-center">My Gipghy search</h1>
 
-  <form class="form-inline">
-    <div class="form-group">
-      <label for="search">Search</label>
-      <input ng-model="ctrl.searchResults" type="text" class="form-control" id="search">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="search">Search</label>
+				<input ng-model="ctrl.searchQuery" type="text" class="form-control" id="search">
 
-    </div>
-  </form>
+			</div>
+		</form>
 
-<div class="row">
-    <div class="col-xs-12">
-      <!--TODO #4: Show the movie poster image here-->
-      <img class="movie-poster" ng-repeat={{"Hello"}}>
-    </div>
+		<div class="row">
+			<div class="col-xs-12">
+				<!--TODO #4: Show the movie poster image here-->
+				<img class="movie-poster">
+			</div>
+		</div>
+	</div>
+
+			{{ctrl | json}}
