@@ -1,4 +1,4 @@
-var app = angular.module('giphyApp', ['ngRoute']);
+var app = angular.module('giphyApp', ['ngRoute', 'ui.bootstrap']);
 
 app.config(function($routeProvider) {
 	$routeProvider

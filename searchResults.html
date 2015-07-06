@@ -6,13 +6,9 @@
 	<form class="form-inline">
 		<div class="form-group">
 			<label for="search">Search</label>
-			<input ng-model="ctrl.searchQuery" typeahead="tag for tag in ctrl.getTags | filter:$viewValue | limitTo:8" type="text" class="form-control">
-
-			{{tag[0]}}
-
+			<input ng-model="ctrl.searchQuery" typeahead="tag for tag in ctrl.getTags | filter:ctrl.searchQuery | limitTo:8" type="text" class="form-control">
 		</div>
 	</form>
-
 	<div class="row">
 		<div class="col-xs-12">
 			<!--TODO #4: Show the movie poster image here-->
@@ -21,4 +17,7 @@
 	</div>
 </div>
 
-{{ctrl | json}}
+
+<pre>	
+	{{ctrl.getTags | json}}
+</pre>

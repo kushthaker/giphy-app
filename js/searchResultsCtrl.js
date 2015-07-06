@@ -6,10 +6,10 @@ function searchResultsCtrl($location, api) {
 	self.api = api; 
 
 	self.searchQuery = "";
+	self.getTags = [];
 
-	self.getTags = api.getTags().then(function(data) {
+	api.getTags().then(function(data) {
 		self.getTags = data;
-
 	});
 }
 
