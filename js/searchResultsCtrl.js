@@ -1,6 +1,8 @@
-function searchResultsCtrl($location) {
+function searchResultsCtrl($location, api) {
 
 	this.location = $location;   
+	this.api = api; 
+
 
 }
 
