@@ -1,0 +1,43 @@
+div id="gif-details">
+  <h1 class="text-center">{{ctrl._______.Title}}</h1>
+  <div class="row">
+    <div class="col-xs-5">
+      <img class="gifDetails" ng-src="{{}}">
+    </div>
+    <div class="col-xs-7">
+      <table class="table">
+        <!--TODO #4: Show all the fields-->
+        <tr>
+          <td><strong>Id</strong></td>
+          <td>{{ctrl.______.Id}}</td>
+        </tr>
+
+        <tr>
+          <td><strong>Username</strong></td>
+          <td>{{ctrl._______.Username}}</td>
+        </tr>
+
+        <tr>
+          <td><strong>Url</strong></td>
+          <td>{{ctrl.______.Url}</td>
+        </tr>
+          
+        <td><strong>Date</strong></td>
+          <td>{{ctrl._______.Date}}</td>
+        </tr>
+
+        <tr>
+          <td><strong>Tags</strong></td>
+          <td>{{ctrl.______.Tags}}</td>
+        </tr>
+
+      </table>
+    </div>    
+  </div>
+  <div class="row">
+    <div class=buttons>
+      <!--TODO #4: this button takes you back to the home page-->
+      <a href="#/home" class="btn btn-primary">Back</a>
+    </div>
+  </div>
+</div>
