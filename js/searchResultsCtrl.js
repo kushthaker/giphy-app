@@ -6,7 +6,6 @@ function searchResultsCtrl($location, api) {
 	self.api = api; 
 
 	self.searchQuery = "";
-	self.getTags = [];
 
 	api.getTags().then(function(data) {
 		self.getTags = data;
@@ -15,3 +14,13 @@ function searchResultsCtrl($location, api) {
 
 
 angular.module('giphyApp').controller('searchResultsCtrl', searchResultsCtrl);
+
+searchResultsCtrl.prototype.getGifsforTag = function(tagName) {
+	//call API, handle promise
+
+	var self = this;
+
+	self.api.getGifsforTag(tagName).then(function(data) {
+		self.giphyList = data;
+	});
+};

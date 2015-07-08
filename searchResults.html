@@ -1,9 +1,9 @@
 
 
 <div>
-	<h1 class="text-center">My Gipghy search</h1>
+	<h1 class="text-center">Giphy Search App</h1>
 
-	<form class="form-inline">
+	<form class="form-inline" ng-submit="ctrl.getGifsforTag(ctrl.searchQuery)">
 		<div class="form-group">
 			<label for="search">Search</label>
 			<input ng-model="ctrl.searchQuery" typeahead="tag for tag in ctrl.getTags | filter:ctrl.searchQuery | limitTo:8" type="text" class="form-control">
@@ -19,5 +19,5 @@
 
 
 <pre>	
-	{{ctrl.getTags | json}}
+	{{ctrl | json}}
 </pre>
