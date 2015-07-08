@@ -10,6 +10,7 @@ function searchResultsCtrl($location, api) {
 	api.getTags().then(function(data) {
 		self.getTags = data;
 	});
+
 }
 
 
@@ -21,6 +22,12 @@ searchResultsCtrl.prototype.getGifsforTag = function(tagName) {
 	var self = this;
 
 	self.api.getGifsforTag(tagName).then(function(data) {
-		self.giphyList = data;
+		
+		//ran into weird error here,
+		//had to set data.gifs on controller for it to work
+		//data alone wasn't enough
+		
+		self.giphyListObject = data;
+		self.giphyList = data.gifs;
 	});
 };

@@ -9,15 +9,16 @@
 			<input ng-model="ctrl.searchQuery" typeahead="tag for tag in ctrl.getTags | filter:ctrl.searchQuery | limitTo:8" type="text" class="form-control">
 		</div>
 	</form>
-	<div class="row">
-		<div class="col-xs-12">
-			<!--TODO #4: Show the movie poster image here-->
-			<img class="movie-poster">
+
+	<div class="row" ng-repeat="gif in ctrl.giphyList">
+		<div class="col-xs-12 text-center">
+			<img ng-src="{{gif.url}}">
 		</div>
 	</div>
+
 </div>
 
 
 <pre>	
-	{{ctrl | json}}
+	{{ctrl.giphyList | json}}
 </pre>
