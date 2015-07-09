@@ -23,11 +23,21 @@ searchResultsCtrl.prototype.getGifsforTag = function(tagName) {
 
 	self.api.getGifsforTag(tagName).then(function(data) {
 		
-		//ran into weird error here,
-		//had to set data.gifs on controller for it to work
-		//data alone wasn't enough
-		
 		self.giphyListObject = data;
-		self.giphyList = data.gifs;
+		console.log(data);
 	});
 };
+
+searchResultsCtrl.prototype.getDetails = function(gifID) {
+
+	this.location.path('/giphy/' + gifID);
+
+}
+
+//1. use resolve in router to load API before details page
+//2. use routeprovider to give gifdetails controller details
+//3. click tag to search 
+//4. 
+
+
+

@@ -10,7 +10,7 @@
 		</div>
 	</form>
 
-	<div class="row" ng-repeat="gif in ctrl.giphyList">
+	<div class="row" ng-repeat="gif in ctrl.giphyListObject.gifs" ng-click="ctrl.getDetails(gif.id)">
 		<div class="col-xs-12 text-center">
 			<img ng-src="{{gif.url}}">
 		</div>

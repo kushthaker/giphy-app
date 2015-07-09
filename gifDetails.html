@@ -1,5 +1,5 @@
-div id="gif-details">
-  <h1 class="text-center">{{ctrl._______.Title}}</h1>
+<div id="gif-details">
+  <h1 class="text-center">{{ctrl.Title}}</h1>
   <div class="row">
     <div class="col-xs-5">
       <img class="gifDetails" ng-src="{{}}">
@@ -9,26 +9,26 @@ div id="gif-details">
         <!--TODO #4: Show all the fields-->
         <tr>
           <td><strong>Id</strong></td>
-          <td>{{ctrl.______.Id}}</td>
+          <td>{{ctrl.Id}}</td>
         </tr>
 
         <tr>
           <td><strong>Username</strong></td>
-          <td>{{ctrl._______.Username}}</td>
+          <td>{{ctrl.Username}}</td>
         </tr>
 
         <tr>
           <td><strong>Url</strong></td>
-          <td>{{ctrl.______.Url}</td>
+          <td>{{ctrl.Url}}</td>
         </tr>
           
         <td><strong>Date</strong></td>
-          <td>{{ctrl._______.Date}}</td>
+          <td>{{ctrl.Date}}</td>
         </tr>
 
         <tr>
           <td><strong>Tags</strong></td>
-          <td>{{ctrl.______.Tags}}</td>
+          <td>{{ctrl.Tags}}</td>
         </tr>
 
       </table>
@@ -41,3 +41,5 @@ div id="gif-details">
     </div>
   </div>
 </div>
+
+<pre> {{ctrl | json}} </pre>

@@ -25,3 +25,12 @@ ApiService.prototype.getGifsforTag = function(tagName) {
 		return response.data;
 	});
 };
+
+ApiService.prototype.getGifDetails = function(gifID) {
+	var self = this;
+
+	return self.http.get(self.BASE_URL + '/gif/[' + gifID + ']?format=json')
+	.then(function(response) {
+		return response.data;
+	});
+};
