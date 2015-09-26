@@ -1,7 +1,8 @@
 
 
 <div>
-	<h1 class="text-center">Giphy Search App</h1>
+	<h1 class="text-center">So you need the perfect gif?</h1>
+	<h4>Look it up and hit enter to search.</h4>
 
 	<form class="form-inline" ng-submit="ctrl.getGifsforTag(ctrl.searchQuery)">
 		<div class="form-group">
@@ -11,14 +12,9 @@
 	</form>
 
 	<div class="row" ng-repeat="gif in ctrl.giphyListObject.gifs" ng-click="ctrl.getDetails(gif.id)">
-		<div class="col-xs-12 text-center">
+		<div class="col-xs-12 text-center giphy">
 			<img ng-src="{{gif.url}}">
 		</div>
 	</div>
 
 </div>
-
-
-<pre>	
-	{{ctrl.giphyList | json}}
-</pre>

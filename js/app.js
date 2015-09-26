@@ -2,16 +2,12 @@ var app = angular.module('giphyApp', ['ngRoute', 'ui.bootstrap']);
 
 app.config(function($routeProvider) {
 	$routeProvider
-	.when('/home', {
+	.when('/', {
 		templateUrl: 'searchResults.html',
 		controller: 'searchResultsCtrl as ctrl'
 	})
-	.when('/giphy/:giphyId', {
-		templateUrl: 'gifDetails.html',
-		controller: 'gifDetailsCtrl as ctrl'
-	})
 	.otherwise({
-		redirectTo: '/home',
+		redirectTo: '/',
 	})
 
 });

@@ -36,7 +36,7 @@ searchResultsCtrl.prototype.getDetails = function(gifID) {
 
 //1. use resolve in router to load API before details page
 //2. use routeprovider to give gifdetails controller details
-//3. click tag to search 
+//3. click tag to search h
 //4. 
 
 
